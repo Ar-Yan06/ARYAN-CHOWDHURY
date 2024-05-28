@@ -1,7 +1,7 @@
 module.exports.config = {
     name: "rankup",
     version: "1.0.0",
-    permission: 2,
+    permission: 0,
     credits: "farhan",
     description: "Restart Bot",
     prefix: true, 
