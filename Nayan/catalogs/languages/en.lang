@@ -1,72 +1,20 @@
-# includes/listen.js
+# আপনি যদি লাইনের নিচে যেতে চান, দয়া করে \n ব্যবহার করুন। যেমন: SpermLord\nCatalizcs.
+# পরিবর্তন করার পরে, আপনাকে ব্যবহার করার জন্য বটটি পুনরায় চালু করতে হবে।
+# প্রতিটি বাক্যের শুরুতে # অক্ষরটি রাখুন যদি আপনি কোডটি সেই লাইনগুলি চালাতে না চান।
+# বাংলায় অনুবাদ করার জন্য https://www.facebook.com/Rayhan.official.profile. কে ধন্যবাদ!
 
-listen.startLoadEnvironment=proceed to load the environment variable.
-listen.loadedEnvironmentThread=loaded thread environment variable successfully 
-listen.loadedEnvironmentUser=loaded user environment variable successfully 
-listen.successLoadEnvironment=loaded environment variable successfully 
-listen.failLoadEnvironment=can't load environment variable, error : %1
+# mirai.js
 
-# includes/controller/currencies.js
-
-currencies.needObjectOrArray=have to be an array or an object or maybe both
-currencies.needObject=have to be an object
-currencies.needNumber=have to be an number
-
-# includes/controller/threads.js
-
-threads.needObjectOrArray=have to be an Array or an Object or maybe both
-threads.needObject=have to be an Object 
-
-# includes/controller/users.js
-
-users.needObjectOrArray=have to be an Array or an Object or maybe both
-users.needObject=have to be an Object
-
-# includes/handle/handleCommand.js
-
-handleCommand.userBanned=you are unable to use bot.
-handleCommand.threadBanned=your thread are unable to use bot.
-handleCommand.commandNotExist=the command you used doesn't exist in our system, try "%1".
-handleCommand.commandThreadBanned=your thread is unable to use command "%1"
-handleCommand.commandUserBanned=you are unable to use command "%1"
-handleCommand.threadNotAllowNSFW=your thread is not allowed to use NSFW commands
-handleCommand.cantGetInfoThread=can't get your thread's info, error: %1
-handleCommand.permissionNotEnough=you have no permission to use command "%1"
-handleCommand.cantSetMessageReaction=having some unexpected error at setMessageReaction, error: %1
-handleCommand.executeCommand=\ntime and date : %1\ncommand used : %2\nuser id : %3\ngroup id : %4\nargs included : %5\nprocessing time : %6ms
-handleCommand.commandError=having some unexpected error when using command %1, error : %2
-handleCommand.notMatched=this command does not require a prefix to start with.\n\nPleace Without Prefix Use This Command
-handleCommand.noPrefix=this command has no command config "prefix" property
-handleCommand.commandNotFound=the command you used doesn't exist.
-
-# includes/handle/handleCommandEvent.js
-
-handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
-
-# includes/handle/handleCreateDatabase.js
-
-handleCreateDatabase.newThread=nayan - new group detected %1\n
-handleCreateDatabase.newUser=nayan - new user detected %1\n
-
-# includes/handle/handleEvent.js
-
-handleEvent.executeEvent=\ntime and date : %1\nexecuted event : %2\ngroup id : %3\nprocessing time : %4ms
-handleEvent.eventError=having some error when executing event %1, error: %12
-
-# includes/handle/handleReaction.js
-
-handleReaction.missingValue=missing value to respond your problem
-handleReaction.executeError=Having some error when responding your problem, error: %1
-
-# includes/handle/handleReply.js
-
-handleReply.missingValue=missing value to respond your problem
-handleReply.executeError=having some error when responding your problem, error: %1
-
-# includes/handle/handleSchedule.js
-
-handleSchedule.exectuteError=having some error when schedule at module %1, error : %2
-
-# utils/index.js
-
-utils.throwError=syntax error, please use %1help %2 for more usage details.
+mirai.errorFormat=বিকৃত মডিউল!
+mirai.nameExist=মডিউলের নাম অন্য মডিউলের মতো!
+mirai.notFoundLanguage=মডিউল %1 আপনার ভাষা সমর্থন করে না
+mirai.notFoundPackage=মডিউল %2 এর জন্য প্যাকেজ %1 সমর্থন পাওয়া যাচ্ছে না, ইনস্টল করা হচ্ছে...
+mirai.cantInstallPackage=মডিউল %2 এর জন্য প্যাকেজ %1 ইনস্টল করা যাচ্ছে না, ত্রুটি: %3
+mirai.loadedPackage=মডিউল %1 এর জন্য সম্পূর্ণ প্যাকেজ সফলভাবে ইনস্টল করা হয়েছে
+mirai.loadedConfig=মডিউল %1 এর জন্য সফলভাবে কনফিগারেশন ইনস্টল করা হয়েছে
+mirai.cantLoadConfig=মডিউল %1 এর কনফিগারেশন ইনস্টল করা যাচ্ছে না, ত্রুটি: %2
+mirai.cantOnload=মডিউল %1 সেটআপ চালু করা যাচ্ছে না, ত্রুটি: %1
+mirai.successLoadModule=সফলভাবে ইনস্টল করা মডিউল %1
+mirai.failLoadModule=মডিউল %1 ইনস্টল করা যাচ্ছে না, ত্রুটি: %2
+mirai.finishLoadModule= %1 মডিউল কমান্ড এবং %2 মডিউল ইভেন্ট সফলভাবে ইনস্টল করা হয়েছে
+mirai.foundPathAppstate=ফাইল অ্যাপস্টেট
