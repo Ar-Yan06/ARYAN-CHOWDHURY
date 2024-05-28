@@ -45,9 +45,9 @@ module.exports.handleEvent = async function({ api, event, Currencies, Users, get
 
 		let arrayContent;
 
-		if (existsSync(__dirname + "/noprefix/rankup/")) mkdirSync(__dirname + "/noprefix/rankup/", { recursive: true });
-		if (existsSync(__dirname + `/noprefix/rankup/rankup.gif`)) {
-			arrayContent = { body: message, attachment: createReadStream(__dirname + `/noprefix/rankup/rankup.gif`), mentions: [{ tag: name, id: senderID }] };
+		if (existsSync(__dirname + "/Nayan/")) mkdirSync(__dirname + "/Nayan/", { recursive: true });
+		if (existsSync(__dirname + `/Nayan/rankup.gif`)) {
+			arrayContent = { body: message, attachment: createReadStream(__dirname + `/Nayan/rankup.gif`), mentions: [{ tag: name, id: senderID }] };
 		} else {
 			arrayContent = { body: message, mentions: [{ tag: name, id: senderID }] };
 		}
