@@ -49,7 +49,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('file cannot be sent because it is larger than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-            body: `title : ${data.title}\ntime : ${this.convertHMS(data.dur)}\nprocessing time : ${Math.floor((Date.now()- data.timestart)/1000)} seconds`,
+            body: `🎵  𝐓𝐈𝐓𝐋𝐄 : ${data.title}\n⏱️ 𝐓𝐈𝐌𝐄 : ${this.convertHMS(data.dur)}\n⏱️ 𝐏𝐑𝐎𝐂𝐄𝐒𝐒𝐈𝐍𝐆 𝐓𝐈𝐌𝐄 : ${Math.floor((Date.now()- data.timestart)/1000)} 𝐒𝐄𝐂𝐎𝐍𝐃\n💿===𝐅𝐀𝐑𝐇𝐀𝐍-𝐈𝐒𝐋𝐀𝐌===💿`,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
             
@@ -67,7 +67,7 @@ module.exports.convertHMS = function(value) {
     return (hours != '00' ? hours +':': '') + minutes+':'+seconds;
 }
 module.exports.run = async function ({ api, event, args }) {
-    if (args.length == 0 || !args) return api.sendMessage('the search field cannot be empty', event.threadID, event.messageID);
+    if (args.length == 0 || !args) return api.sendMessage('»আপনি যে গানটি শুনতে চান তার একটি লাইন লিখুন 💝 এই বার empty!😓\n আবার নতুন করে কমান্ড দেন [ 𝐅𝐀𝐑𝐇𝐀𝐍-𝐈𝐒𝐋𝐀𝐌 ]', event.threadID, event.messageID);
     const keywordSearch = args.join(" ");
     var path = `${__dirname}/cache/sing-${event.senderID}.mp3`
     if (fs.existsSync(path)) { 
@@ -78,7 +78,7 @@ module.exports.run = async function ({ api, event, args }) {
             var data = await downloadMusicFromYoutube(args.join(" "), path);
             if (fs.statSync(path).size > 26214400) return api.sendMessage('file cannot be sent because it is larger than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
             return api.sendMessage({ 
-                body: `title : ${data.title}\ntime : ${this.convertHMS(data.dur)}\nprocessing time : ${Math.floor((Date.now()- data.timestart)/1000)} seconds`,
+                body: `🎵  𝐓𝐈𝐓𝐋𝐄 : ${data.title}\n⏱️ 𝐓𝐈𝐌𝐄 : ${this.convertHMS(data.dur)}\n⏱️ 𝐏𝐑𝐎𝐂𝐄𝐒𝐒𝐈𝐍𝐆 𝐓𝐈𝐌𝐄 : ${Math.floor((Date.now()- data.timestart)/1000)} 𝐒𝐄𝐂𝐎𝐍𝐃\n💿===𝐅𝐀𝐑𝐇𝐀𝐍-𝐈𝐒𝐋𝐀𝐌===💿`,
                 attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
             event.messageID)
             
@@ -96,7 +96,7 @@ module.exports.run = async function ({ api, event, args }) {
               num = num+=1
               msg += (`${num} - ${value.title} (${value.length.simpleText})\n\n`);
             }
-            var body = `have ${link.length} results match your search term :\n\n${msg}please reply(feedback) choose one of the above searches`
+            var body = `»আপনার সার্চ দেওয়া ${link.length}  টি গান নিচে দেওয়া হল 🌐: [ 𝐅𝐀𝐑𝐇𝐀𝐍-𝐈𝐒𝐋𝐀𝐌 ]\n\n${msg}»  আপনি যে গানটি চালু করতে চান নাম্বার দিয়ে  রিপ্লাই দেন 💝 [ 𝐅𝐀𝐑𝐇𝐀𝐍-𝐈𝐒𝐋𝐀𝐌 ]`
             return api.sendMessage({
               body: body
             }, event.threadID, (error, info) => global.client.handleReply.push({
@@ -107,7 +107,7 @@ module.exports.run = async function ({ api, event, args }) {
               link
             }), event.messageID);
           } catch(e) {
-            return api.sendMessage('an error occurred, please try again in a moment\n' + e, event.threadID, event.messageID);
+            return api.sendMessage('একটি ত্রুটি ঘটেছে, অনুগ্রহ করে কিছুক্ষণের মধ্যে আবার চেষ্টা করুন!!\n' + e, event.threadID, event.messageID);
         }
     }
   }
