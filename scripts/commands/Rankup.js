@@ -75,7 +75,7 @@ module.exports.languages = {
 		"on": "on",
 		"off": "off",
 		"successText": "success notification rankup!",
-		"levelup": "{name}, your keyboard hero level has reached level {level}",
+		"levelup": "আসসালামু আলাইকুম {name}, আপনার চ্যাটিং লেভেল {level} 🤷‍♂️",
 	}
 };
 
