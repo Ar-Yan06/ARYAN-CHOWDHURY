@@ -1,50 +1,94 @@
-const axios = require("axios");
+//File created by Mohammad Nayan and fully coded by Nayan
 
-module.exports.config = {
-    name: "jan",
+const axios = require('axios');
+
+module.exports = {
+  config: {
+    name: "Jan",
     version: "1.0.0",
     permission: 0,
-    credits: "farhan",
-    description: "Talk to Ana",
-    prefix: true, 
-    category: "sim simi fun", 
-    usages: "mini",
+    credits: "nayan",
+    description: "...",
+    prefix: 'awto',
+    category: "talk",
+    usages: "hi",
     cooldowns: 5,
-    dependencies: {}
-};
+  },
 
-module.exports.handleEvent = async function ({ api, event }) {
-    if (!event.body || !(event.body.indexOf("Jan") === 0 || event.body.indexOf("জান") === 0)) return;
-    const args = event.body.split(/\s+/);
-    args.shift();
-
-    let { messageID, threadID, senderID, body } = event;
-    let tid = threadID,
-        mid = messageID;
-    const content = encodeURIComponent(args.join(" "));
-    if (!args[0]) return api.sendMessage(" hm bolo bby😸 ...", tid, mid);
+  handleReply: async function ({ api, event, handleReply }) {
     try {
-        console.log("Request:", `https://simsimi.fun/api/v2/?mode=talk&lang=bn&message=${content}&filter=true`); // Log request URL
-        const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=bn&message=${content}&filter=true`);
-        console.log("Response:", res.data); // Log response data
-        const respond = res.data.success;
-        if (res.data.error) {
-            api.sendMessage(`Error: ${res.data.error}`, tid, (error, info) => {
-                if (error) {
-                    console.error(error);
-                }
-            }, mid);
-        } else {
-            api.sendMessage(respond, tid, (error, info) => {
-                if (error) {
-                    console.error(error);
-                }
-            }, mid);
-        }
-    } catch (error) {
-        console.error(error);
-        api.sendMessage("🤖 𝙰𝚗 𝚎𝚛𝚛𝚘𝚛 𝚘𝚌𝚌𝚞𝚛𝚎𝚍 𝚠𝚑𝚒𝚕𝚎 𝚐𝚎𝚝𝚝𝚒𝚗𝚐 𝙳𝚊𝚝𝚊𝚋𝚊𝚜𝚎, 𝚜𝚘𝚛𝚛𝚢 𝚋𝚊𝚋𝚎 🥺", tid, mid);
-    }
-};
+      const response = await axios.get(`http://37.27.114.136:25472/sim?type=ask&ask=${encodeURIComponent(event.body)}`);
+      console.log(response.data);
+      const result = response.data.data.msg;
 
-module.exports.run = async function ({ api, event }) {};
+      
+      api.sendMessage(result, event.threadID, (error, info) => {
+        if (error) {
+          console.error('Error replying to user:', error);
+          return api.sendMessage('An error occurred while processing your request. Please try again later.', event.threadID, event.messageID);
+        }
+        global.client.handleReply.push({
+          type: 'reply',
+          name: this.config.name,
+          messageID: info.messageID,
+          author: event.senderID,
+          head: event.body
+        });
+      }, event.messageID);
+
+    } catch (error) {
+      console.error('Error in handleReply:', error);
+      api.sendMessage('An error occurred while processing your request. Please try again later.', event.threadID, event.messageID);
+    }
+  },
+
+
+  
+  start: async function ({ nayan, events, args, Users }) {
+    try {
+      const msg = args.join(" ");
+      if (!msg) {
+        var tl = ["Hum Baby Bolo🐱"]
+        var name = await Users.getNameUser(events.senderID);
+        var rand = tl[Math.floor(Math.random() * tl.length)]
+        return nayan.sendMessage({ 
+              body: `${name}, ${rand}`, 
+              mentions: [{ tag: name, id: events.senderID }] }, events.threadID, (error, info) => {
+          if (error) {
+            return nayan.sendMessage('An error occurred while processing your request. Please try again later.', events.threadID, events.messageID);
+          }
+
+          global.client.handleReply.push({
+            type: 'reply',
+            name: this.config.name,
+            messageID: info.messageID,
+            author: events.senderID,
+            head: msg,
+          });
+        }, events.messageID);
+    }
+
+      const response = await axios.get(`http://37.27.114.136:25472/sim?type=ask&ask=${encodeURIComponent(msg)}`);
+      console.log(response.data);
+      const replyMessage = response.data.data.msg;
+
+      nayan.sendMessage({ body: replyMessage }, events.threadID, (error, info) => {
+        if (error) {
+          return nayan.sendMessage('An error occurred while processing your request. Please try again later.', events.threadID, events.messageID);
+        }
+
+        global.client.handleReply.push({
+          type: 'reply',
+          name: this.config.name,
+          messageID: info.messageID,
+          author: events.senderID,
+          head: msg,
+        });
+      }, events.messageID);
+
+    } catch (error) {
+      console.log(error)
+      nayan.sendMessage('An error has occurred, please try again later.', events.threadID, events.messageID);
+    }
+  }
+};
