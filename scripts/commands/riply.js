@@ -3,7 +3,7 @@ module.exports.config = {
   name: "reply",
   version: "1.1.0",
   permission: 0,
-  credits: "Farhan",
+  credits: "aRYAN",
   description: "noprefix",
   prefix: false,
   category: "user",
@@ -26,7 +26,7 @@ react.includes("nude") ||
 react.includes("Fucking") ||
 react.includes("🤤")) {
 		var msg = {
-				body: "- ভালোবাসা নামক আব্লামি করতে মন চাইলে ফারহান  এর ইনবক্স চলে জাও-!!🌚"
+				body: "- ভালোবাসা নামক আব্লামি করতে মন চাইলে আরয়ান  এর ইনবক্স চলে জাও-!!🌚"
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😤", event.messageID, (err) => {}, true)
