@@ -2,7 +2,7 @@ module.exports.config = {
   name: "islam",
   version: "1.0.0",
   permission: 0,
-  credits: "farhan",
+  credits: "ArYan",
   description: "Random sad video",
   prefix: true,
   category: "Media",
