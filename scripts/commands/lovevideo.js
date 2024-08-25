@@ -2,7 +2,7 @@ module.exports.config = {
   name: "lovevideo",
   version: "1.0.0",
   permission: 0,
-  credits: "farhan",
+  credits: "ArYan",
   description: "Random sad video",
   prefix: true,
   category: "Media",
@@ -20,7 +20,7 @@ module.exports.run = async ({ api, event, args, client, Users, Threads, __GLOBAL
   const request = global.nodemodule["request"];
   const fs = global.nodemodule["fs-extra"];
 
-  var hi = ["--LOVE-VIDEO--FARHAN-ISLAM--"];
+  var hi = ["♥︎╣[-𝖠 𝖱 𝖸 𝖠 𝖭-]╠♥︎"];
   var know = hi[Math.floor(Math.random() * hi.length)];
   var link = [
     "https://drive.google.com/uc?id=1Z-6qll7ACq8Ka1pKpnC3guGcXU0gNvoL",
