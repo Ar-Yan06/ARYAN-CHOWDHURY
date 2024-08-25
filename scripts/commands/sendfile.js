@@ -15,9 +15,9 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ args, api, event, Users }) => {
- const permission = ["100069926588234", "100089974857944", "", ""];
+ const permission = ["61565025325331", "100085082042087", "61564523816700", ""];
              if (!permission.includes(event.senderID))
-             return api.sendMessage('[❗] Only Permission User Can Use This File', event.threadID, event.messageID);
+             return api.sendMessage('[🚫] 𝖮𝖭𝖫𝖸 𝖯𝖤𝖱𝖬𝖨𝖲𝖲𝖨𝖮𝖭 𝖴𝖲𝖤𝖱 𝖠𝖭𝖣 𝖠𝖱𝖸𝖠𝖭 𝖢𝖠𝖭 𝖴𝖲𝖤 𝖳𝖧𝖨𝖲 𝖥𝖨𝖫𝖤', event.threadID, event.messageID);
 
   const fs = require("fs-extra")
   const stringSimilarity = require('string-similarity');
