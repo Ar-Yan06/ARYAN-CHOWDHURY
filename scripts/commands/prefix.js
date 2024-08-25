@@ -27,7 +27,7 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
       if (config.PREFIX == null) {
         return out(`bot prefix : ${global.config.PREFIX}`)
       }
-      else return out(`bot prefix : ${global.config.PREFIX}`)
+      else return out(`🌐 System prefix: ${global.config.PREFIX}\n🛸 Your box chat prefix:${global.config.PREFIX}`)
     }
 
   });
