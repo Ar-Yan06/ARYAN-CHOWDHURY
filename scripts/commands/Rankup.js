@@ -74,8 +74,8 @@ module.exports.languages = {
 	"en": {
 		"on": "on",
 		"off": "off",
-		"successText": "success notification rankup!",
-		"levelup": "আসসালামু আলাইকুম {name}, আপনার চ্যাটিং লেভেল {level} 🤷‍♂️",
+		"successText": "𝖠𝖱𝖸𝖠𝖭 𝖲𝖴𝖢𝖢𝖤𝖲𝖲 𝖭𝖮𝖳𝖨𝖥𝖨𝖢𝖠𝖳𝖨𝖮𝖭 𝖱𝖠𝖭𝖪𝖴𝖯!",
+		"levelup": "𝖠𝖲𝖲𝖠𝖫𝖠𝖬𝖴 𝖠𝖫𝖠𝖨𝖪𝖴𝖬 {name},𝖸𝖮𝖴𝖱 𝖢𝖧𝖠𝖳 𝖫𝖤𝖵𝖤𝖫 {level} 🤷‍♂️",
 	}
 };
 
