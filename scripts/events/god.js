@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "logs",
+	name: "god",
 	eventType: ["log:unsubscribe","log:subscribe","log:thread-name"],
 	version: "1.0.0",
 	credits: "Nayan",
