@@ -19,15 +19,15 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.imgur.com/h9gf4Wj.jpeg",
+var link = ["https://i.imgur.com/x7NlpQW.jpeg",
 
-            "https://i.imgur.com/SoheK1f.jpeg", 
+            "https://i.imgur.com/x7NlpQW.jpeg", 
 
-            "https://i.imgur.com/ubi6lLz.jpeg",
+            "https://i.imgur.com/x7NlpQW.jpeg",
 
-"https://i.imgur.com/sJCJVW9.jpeg",
+"",
 
-            "https://i.imgur.com/7cbZ0qL.jpeg"];
+            ""];
 
 var callback = () => api.sendMessage({body:`╭•┄┅══𝐅𝐀𝐑𝐀𝐍-𝐈𝐒𝐋𝐀𝐌══┅┄•╮\n\nꗥ̳̳̳̳̳̳̳̳̳̳̿̿̿̿̿̿̿̿̿̿⃟ꗥꔸআসসালামু আলাইকুমꔸꗥ⃟ꗥ̳̳̳̳̳̳̳̳̳̳̿̿̿̿̿̿̿̿̿̿\n
 
@@ -70,12 +70,12 @@ var callback = () => api.sendMessage({body:`╭•┄┅══𝐅𝐀𝐑𝐀�
 •—»✨ যারা বট সম্পক  বুঝেন না, তারা এডমিন কে মেনশন দিয়ে বলবেন আর কোন কমান্ড প্রয়োজন হলে /help এই কমান্ড ব্যবহার করতে পারেন 
 ★এডমিন এর ফেসবুক আইডি কোনো হেল্প লাগলে নক দিতে পারেন 
 
-https://www.facebook.com/FarhanIslamImon.official?mibextid=ZbWKwL
+https://www.facebook.com/ArYan.com.404
 
 <------------------------------------------------------------------------->___সাথেই থাকুন🌸༅༎•─
 
 ꗥ̳̳̳̳̳̳̳̳̳̳̿̿̿̿̿̿̿̿̿̿⃟ꗥꔸ𝘽𝙊𝙏-𝙊𝙒𝙉𝙀𝙍-𝗙𝗔𝗥𝗛𝗔𝗡-𝗜𝗦𝗟𝗔𝗠ꔸꗥ⃟ꗥ̳̳̳̳̳̳̳̳̳̳̿̿̿̿̿̿̿̿̿̿
 
-─༅༎•🌺ধন্যবাদ সবাইকে🌸༅༎•─\n\n╰•┄┅══𝐅𝐀𝐑𝐀𝐍-𝐈𝐒𝐋𝐀𝐌══┅┄•╯`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
+─༅༎•🌺ধন্যবাদ সবাইকে🌸༅༎•─\n\n╰•┄┅═♥︎╣[-𝖠𝖱𝖸𝖠𝖭-]╠♥︎═┅┄•╯`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
    };
