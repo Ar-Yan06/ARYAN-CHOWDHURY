@@ -2,7 +2,7 @@ module.exports.config = {
   name: "info",
   version: "1.0.0",
   permission: 0,
-  credits: "farhan",
+  credits: "ArYan",
   prefix: true,
   description: "search results on google",
   category: "without prefix",
@@ -25,34 +25,34 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Manila").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.postimg.cc/yd8TtCQx/received-825512762409044.jpg", 
+var link = ["https://i.imgur.com/vukvXxN.jpeg", 
 
-            "https://i.postimg.cc/CMWQBdr4/received-844582530583225.jpg", 
+            "https://i.imgur.com/vukvXxN.jpeg", 
 
-            "https://i.postimg.cc/cJ2Q9tn9/received-943134260313225.jpg",
+            "https://i.imgur.com/x7NlpQW.jpeg",
 
-"https://i.postimg.cc/zXzRkFQD/received-1513370482734848.jpg",
+"",
 
-            "https://i.postimg.cc/zB24Pjjm/IMG-8481.jpg"];
+            ""];
 
 var callback = () => api.sendMessage({body:`𝙸𝙽𝙵𝙾 𝙰𝙽𝙳 𝙱𝙾𝚃 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽
 ________________________________________
 
 ❇️𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 : ${global.config.BOTNAME}
 
-❇️𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 :『 𝙵𝙰𝚁𝙷𝙰𝙽-𝙸𝚂𝙻𝙰𝙼 』
+❇️𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 :『 𝙰𝚁𝚈𝙰𝙽 𝙲𝙷𝙾𝚆𝙳𝙷𝚄𝚁𝚈 』
 
-❇️𝙰𝙳𝙳𝚁𝙴𝚂𝚂 : 𝙱𝙰𝚁𝙸𝚂𝙷𝙰𝙻
+❇️𝙰𝙳𝙳𝚁𝙴𝚂𝚂 : 𝙳𝙷𝙰𝙺𝙰 𝙶𝙰𝚉𝙸𝙿𝚄𝚁
 
 _____________𝙲𝙾𝙽𝚃𝙰𝙲𝚃_____________
 
-❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙸𝙳 : https://www.facebook.com/profile.php?id=100089974857944
+❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙸𝙳 : https://www.facebook.com/ArYan.com.404
 
-❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝚔 𝙿𝙰𝙶𝙴: https://www.facebook.com/FarhanIslamImon.official?mibextid=ZbWKwL
+❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝚔 𝙿𝙰𝙶𝙴: 𝙽𝙾 
 
 ❇️𝙱𝙾𝚃 𝙿𝚁𝙴𝙵𝙸𝚇 : ${global.config.PREFIX}
 
-❇️𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 :  𝙵𝙰𝚁𝙷𝙰𝙽_𝙸𝚂𝙻𝙰𝙼
+❇️𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 : 𝙰𝚁𝚈𝙰𝙽 
 
 𝙾𝚃𝙷𝙴𝚁 𝙸𝙽𝙵𝙾𝙼𝙰𝚃𝙸𝙾𝙽____________________
 
@@ -64,6 +64,6 @@ _____________𝙲𝙾𝙽𝚃𝙰𝙲𝚃_____________
 
 𝙱𝙾𝚃 𝙸𝚂 𝚁𝚄𝙽𝙽𝙸𝙽𝙶 ${hours}:${minutes}:${seconds}.
 
-𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 ${global.config.BOTNAME} 『🤖🖤』`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
-      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
+𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 ${global.config.BOTNAME} 『🤖🖤』`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpeg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpeg")); 
+      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpeg")).on("close",() => callback());
    }; 
