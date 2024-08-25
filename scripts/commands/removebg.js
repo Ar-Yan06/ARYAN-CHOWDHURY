@@ -40,7 +40,7 @@ const res = await removebg(content)
   allimage.push(fs.createReadStream(__dirname + "/cache/removebg.jpg"));
   
         {
-            msg += `🖼️=== [ REMOVING BACKGROUND ] ===🖼️`
+            msg += `🖼️=== [ 𝖱𝖤𝖬𝖮𝖵𝖤𝖡𝖦 𝖡𝖠𝖢𝖪𝖦𝖱𝖠𝖴𝖭𝖳 ] ===🖼️`
         }
 
         return api.sendMessage({
