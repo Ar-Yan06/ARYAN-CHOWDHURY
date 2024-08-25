@@ -1,10 +1,10 @@
 module.exports.config = {
-  name: "nayan",
+  name: "aryan",
 	version: "1.0.0",
 	permission: 0,
   prefix: false,
-	credits: "Nayan",
-	description: "I am nayan better than ChatGPT and Bard",
+	credits: "aryan",
+	description: "I am aryan better than ChatGPT and Bard",
 	category: "user",
 	cooldowns: 5
 };
