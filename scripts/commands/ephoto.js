@@ -16,7 +16,7 @@ module.exports = {
 
   start: async function ({ nayan, events, args, NAYAN }) {
     if (!NAYAN) {
-      return nayan.reply(`[❌] Unsupported this file your bot`, events.threadID);
+      return nayan.reply(`[🚫] Unsupported this file your bot`, events.threadID);
     }
     NAYAN.react("⏳️")
     const { messageID, threadID } = events;
