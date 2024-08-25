@@ -2,7 +2,7 @@ module.exports.config = {
   name: "short", 
   version: "1.0.0", 
   permission: 0,
-  credits: "farhan",
+  credits: "Aryan",
   description: "Random sad video",
   prefix: true,
   category: "Media", 
@@ -49,7 +49,7 @@ module.exports.run = async({ api, event, args, client, Users, Threads, __GLOBAL,
 
   const callback = () => {
     api.sendMessage({
-      body: `「 --SHORT-VIDEO--FARHAN-ISLAM-- 」`,
+      body: `「 ♥︎╣[- 𝖠 𝖱 𝖸 𝖠 𝖭-]╠♥︎ 」`,
       attachment: fs.createReadStream(__dirname + "/cache/15.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4"));
   };
