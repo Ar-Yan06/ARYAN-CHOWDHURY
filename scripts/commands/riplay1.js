@@ -3,7 +3,7 @@ module.exports.config = {
   name: "ripley1",
   version: "2.0.1",
   permission: 0,
-  credits: "Farhan",
+  credits: "𝖠𝖱𝖸𝖠𝖭",
   description: "noprefix",
   prefix: false,
   category: "user",
