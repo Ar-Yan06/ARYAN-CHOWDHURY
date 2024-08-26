@@ -1,6 +1,6 @@
 <h3 align="center">
   
-  <p align="center"><img src="https://img.shields.io/badge/WLCM%20TO -ARYAN CMD-?colorA=%23ff0000&colorB=%23017e40&style=flat-square">  
+  <p align="center"><img src="https://img.shields.io/badge/WLCM%20TO -ARYAN CMD FILE-green?colorA=%23ff0000&colorB=%23017e40&style=flat-square">  
   
 </h3>
 
